@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 import { routeTable } from "../../src/route";
-import Card from "../components/card";
-import Footer from "../components/footer";
-import Header from "../components/header";
-import Navbar from "../components/navbar/navbar";
+import Card from "../../components/card";
+import Footer from "../../components/footer";
+import Header from "../../components/header";
+import Navbar from "../../components/navbar/navbar";
 
 const MetodeTertup: NextPage = () => {
   return (

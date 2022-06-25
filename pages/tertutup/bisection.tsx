@@ -1,15 +1,15 @@
 import { NextPage } from "next";
 import { useState } from "react";
-import Header from "../components/header";
-import Navbar from "../components/navbar/navbar";
-import Table from "../components/table/table";
-import TBody from "../components/table/tbody";
-import TBodyItem from "../components/table/tbody_item";
-import THead from "../components/table/thead";
-import THeadItem from "../components/table/thead_item";
+import Header from "../../components/header";
+import Navbar from "../../components/navbar/navbar";
+import Table from "../../components/table/table";
+import TBody from "../../components/table/tbody";
+import TBodyItem from "../../components/table/tbody_item";
+import THead from "../../components/table/thead";
+import THeadItem from "../../components/table/thead_item";
 import { setPrecision } from "../../src/formula";
 import Bisection from "../../src/tertutup/bisection";
-import Tombol from "../components/tombol";
+import Tombol from "../../components/tombol";
 
 function calculate(iteration: number): Bisection[] {
   const arrData: Bisection[] = [];

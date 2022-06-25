@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { routeTable } from "../../../src/route";
+import { routeTable } from "../../src/route";
 import NavbarItem from "./navbar_item";
 
 export default function Navbar() {

@@ -1,12 +1,6 @@
 import Link from "next/link";
-import { FC } from "react";
-import { MethodChild } from "../../src/route";
 
-interface ItemProps {
-  item: MethodChild;
-}
-
-const Card: FC<ItemProps> = ({ item }) => {
+const Card = ({ item }: any) => {
   return (
     <>
       <Link href={item.href} passHref>

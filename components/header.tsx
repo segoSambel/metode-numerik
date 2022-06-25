@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { MethodChild } from "../src/route";
 
 function Header({ title }: any) {
   return (

@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Link from "next/link";
-import Header from "../components/header";
-import Navbar from "../components/navbar/navbar";
+import Header from "../../components/header";
+import Navbar from "../../components/navbar/navbar";
 
 const MetodeTerbuka: NextPage = () => {
   return (

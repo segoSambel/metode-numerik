@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 import Link from "next/link";
-import Header from "./components/header";
-import Navbar from "./components/navbar/navbar";
+import Header from "../components/header";
+import Navbar from "../components/navbar/navbar";
 import { routeTable } from "../src/route";
-import Footer from "./components/footer";
+import Footer from "../components/footer";
 
 const Home: NextPage = () => {
   return (
