@@ -41,19 +41,19 @@ export const routeTable: Array<CalculationMethod> = [
       {
         childName: "Fixed Point",
         childDefinition:
-          "Metode tertutup disebut juga metode bracketing. Disebut sebagai metode tertutup karena dalam pencarian akar-akar persamaan non-linier dilakukan dalam suatu selang.",
+          "Metode iterasi titik tetap merupakan metode penyelesaian persamaan non-linier dengan cara menyelesaikan setiap variabel x yang ada dalam suatu persamaan dengan sebagian yang lain",
         href: "/terbuka/fixedpoint",
       },
       {
-        childName: "Newthon Raphson",
+        childName: "Newton Raphson",
         childDefinition:
-          "Metode tertutup disebut juga metode bracketing. Disebut sebagai metode tertutup karena dalam pencarian akar-akar persamaan non-linier dilakukan dalam suatu selang.",
+          "Metode Newton-Raphson merupakan metode penyelesaian persamaan non-linier dengan menggunakan pendekatan satu titik awal dan mendekatinya dengan memperhatikan slope atau gradien.",
         href: "/terbuka/newtonraphson",
       },
       {
         childName: "Secant",
         childDefinition:
-          "Metode tertutup disebut juga metode bracketing. Disebut sebagai metode tertutup karena dalam pencarian akar-akar persamaan non-linier dilakukan dalam suatu selang.",
+          "Metode Secant merupakan perbaikan dari metode regula-falsi dan Newton Raphson, dimana kemiringan dua titik dinyatakan secara diskrit dengan mengambil bentuk garis lurus yang melalui satu titik.",
         href: "/terbuka/secant",
       },
     ],
