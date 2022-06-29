@@ -1,13 +1,9 @@
 import { FC } from "react";
 
-interface TableProps {
-  width: number;
-}
-
-const Table: FC<TableProps> = ({ width, children }) => {
+const Table: FC = ({ children }) => {
   return (
     <>
-      <div className={`max-w-${width}xl mx-auto`}>
+      <div className="mx-auto">
         <div className="flex flex-col">
           <div className="overflow-x-auto shadow-md">
             <div className="inline-block min-w-full align-middle">

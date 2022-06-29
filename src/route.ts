@@ -40,18 +40,21 @@ export const routeTable: Array<CalculationMethod> = [
     child: [
       {
         childName: "Fixed Point",
-        childDefinition: "",
-        href: "/tertutup/fixedpoint",
+        childDefinition:
+          "Metode tertutup disebut juga metode bracketing. Disebut sebagai metode tertutup karena dalam pencarian akar-akar persamaan non-linier dilakukan dalam suatu selang.",
+        href: "/terbuka/fixedpoint",
       },
       {
         childName: "Newthon Raphson",
-        childDefinition: "",
-        href: "/tertutup/newtonraphson",
+        childDefinition:
+          "Metode tertutup disebut juga metode bracketing. Disebut sebagai metode tertutup karena dalam pencarian akar-akar persamaan non-linier dilakukan dalam suatu selang.",
+        href: "/terbuka/newtonraphson",
       },
       {
         childName: "Secant",
-        childDefinition: "",
-        href: "/tertutup/secant",
+        childDefinition:
+          "Metode tertutup disebut juga metode bracketing. Disebut sebagai metode tertutup karena dalam pencarian akar-akar persamaan non-linier dilakukan dalam suatu selang.",
+        href: "/terbuka/secant",
       },
     ],
   },
