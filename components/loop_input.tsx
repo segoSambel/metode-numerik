@@ -1,6 +1,6 @@
 export default function LoopInput({ formErr, validateHandler }: any) {
   return (
-    <div className="relative mx-2">
+    <div className="relative mr-2">
       <div className="absolute flex border border-transparent left-0 top-0 h-full w-10">
         <div className="flex items-center justify-center rounded-tl rounded-bl z-10 bg-gray-100 text-gray-600 text-lg h-full w-full">
           {!formErr ? (
