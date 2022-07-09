@@ -36,7 +36,7 @@ export class Strategy1 implements Strategy {
 
 export class Strategy2 implements Strategy {
   calculate(x: number): number {
-    return Math.sqrt(2 * x + 3);
+    return Math.sqrt(Math.pow(x, 3) - x + 1);
   }
 }
 

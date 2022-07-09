@@ -16,3 +16,7 @@ export function setPrecision(x: any, precision: number = 14): string {
 export function getRandom() {
   return Math.floor(Math.random() * 10) + 1;
 }
+
+export function getRandomZeroFloat() {
+  return parseFloat(Math.random().toFixed(2));
+}

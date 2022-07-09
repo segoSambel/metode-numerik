@@ -13,6 +13,7 @@ import LoopInput from "../../components/loop_input";
 import FixedPoint, { Strategy1, Strategy2 } from "../../src/terbuka/fixedpoint";
 import MathJax from "react-mathjax";
 import RadioSelector from "../../components/radio_selectior";
+import { getRandomZeroFloat } from "../../src/formula";
 
 // TODO: buat algoritma untuk penyusunan list
 function calculate(
@@ -48,15 +49,11 @@ function calculate(
   return arrData;
 }
 
-function getRandom() {
-  return Math.floor(Math.random() * 10) + 1;
-}
-
 const FixedPointPage: NextPage = () => {
   const [loop, setLoop] = useState<number>(0);
   const [data, setData] = useState<FixedPoint[]>([]);
   const [formErr, setFormErr] = useState(true);
-  const [guessNumber, setGuessNumber] = useState<number>(4);
+  const [guessNumber, setGuessNumber] = useState<number>(0.4);
   const [method, setMethod] = useState<number>(1);
 
   const handleClick = () => {
@@ -68,7 +65,7 @@ const FixedPointPage: NextPage = () => {
   };
 
   const getRandomHandler = () => {
-    setGuessNumber(getRandom());
+    setGuessNumber(getRandomZeroFloat());
   };
 
   const validate = (value: any) => {
@@ -116,7 +113,10 @@ const FixedPointPage: NextPage = () => {
                   value={1}
                   checked={method == 1 ? true : false}
                 >
-                  <MathJax.Node formula="x=g(x)" inline></MathJax.Node>
+                  <MathJax.Node
+                    formula="x=\sqrt{x^{3}-x+1}"
+                    inline
+                  ></MathJax.Node>
                 </RadioSelector>
               </MathJax.Provider>
               <div className="my-2">
