@@ -34,10 +34,11 @@ const NavbarItem: FC<MethodProps> = ({ item }) => {
             {item.child.map((i, index: number) => {
               return (
                 <Menu.Item key={index}>
-                  <Link href={i.href} passHref>
-                    <button className="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-gray-100">
+                  {/* TODO: "Legacy Behavior" */}
+                  <Link href={i.href}>
+                    <a className="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-gray-100">
                       {i.childName}
-                    </button>
+                    </a>
                   </Link>
                 </Menu.Item>
               );
