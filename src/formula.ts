@@ -7,8 +7,8 @@ export function firstDerivativeOfFormula(x: number) {
 }
 
 // THIS FUNCTION IS USED TO SET PRECISION OF FLOATING POINT NUMBER
-// export function setPrecision(x: any, precision: number = 7): string {
-//   return Number(x)
-//     .toFixed(precision)
-//     .replace(/\.?0*$/, "");
-// }
+export function setPrecision(x: any, precision: number = 14): string {
+  return Number(x)
+    .toFixed(precision)
+    .replace(/\.?0*$/, "");
+}

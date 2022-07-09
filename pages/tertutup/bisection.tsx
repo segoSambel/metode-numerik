@@ -11,6 +11,7 @@ import Bisection from "../../src/tertutup/bisection";
 import Tombol from "../../components/tombol";
 import FungsiUtama from "../../components/calculations/fungsi_utama";
 import LoopInput from "../../components/loop_input";
+import { setPrecision } from "../../src/formula";
 
 function calculate(iteration: number): Bisection[] {
   const arrData: Bisection[] = [];
@@ -117,7 +118,9 @@ const BisectionPage: NextPage = () => {
                     {v.fac < 0 ? "[a,c]" : "[c,b]"}
                   </td>
                   <td className="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap">
-                    {v.fac < 0 ? Math.abs(v.a - v.c) : Math.abs(v.c - v.b)}
+                    {v.fac < 0
+                      ? setPrecision(Math.abs(v.a - v.c))
+                      : setPrecision(Math.abs(v.c - v.b))}
                   </td>
                 </TBodyItem>
               ))}
