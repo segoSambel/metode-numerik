@@ -60,9 +60,12 @@ const RegulaFalsiPage: NextPage = () => {
           <h1 className="text-center font-bold text-3xl my-20 mb-4">
             Metode Regula Falsi
           </h1>
-          <div className="justify-center mb-5 flex">
-            <p className="mr-3">Fungsi yang akan dihitung:</p>
-            <FungsiUtama></FungsiUtama>
+          <div className="flex flex-col mb-5 items-center">
+            <div>
+              <p className="mr-3 inline">Fungsi yang akan dihitung:</p>
+              <FungsiUtama></FungsiUtama>
+            </div>
+            <div>Nilai awal : a=2.6 dan b=2.5</div>
           </div>
           <div className="flex justify-center items-center">
             <LoopInput formErr={formErr} validateHandler={validate}></LoopInput>
