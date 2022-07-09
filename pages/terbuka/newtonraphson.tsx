@@ -11,6 +11,7 @@ import Tombol from "../../components/tombol";
 import LoopInput from "../../components/loop_input";
 import NewtonRaphson from "../../src/terbuka/newtonraphson";
 import NRFunction from "../../components/calculations/newton_raphson";
+import { getRandom } from "../../src/formula";
 
 function calculate(iteration: number, firstGuess: number): NewtonRaphson[] {
   const arrData: NewtonRaphson[] = [];
@@ -30,11 +31,12 @@ function calculate(iteration: number, firstGuess: number): NewtonRaphson[] {
 const NewtonRaphsonPage: NextPage = () => {
   const [loop, setLoop] = useState<number>(0);
   const [data, setData] = useState<NewtonRaphson[]>([]);
-  const [formErr, setFormErr] = useState(true);
+  const [formErr, setFormErr] = useState<boolean>(true);
+  const [guessNumber, setGuessNumber] = useState<number>(4);
 
   const handleClick = () => {
     if (!formErr) {
-      setData([...calculate(loop, 4)]);
+      setData([...calculate(loop, guessNumber)]);
     }
   };
 
@@ -48,6 +50,10 @@ const NewtonRaphsonPage: NextPage = () => {
     setLoop(value);
   };
 
+  const getRandomHandler = () => {
+    setGuessNumber(getRandom());
+  };
+
   return (
     <>
       <Header title="Metode Newton-Raphson"></Header>
@@ -57,13 +63,29 @@ const NewtonRaphsonPage: NextPage = () => {
           <h1 className="text-center font-bold text-3xl my-20 mb-4">
             Metode Newton-Raphson
           </h1>
-          <div className="justify-center mb-5 flex">
-            <p className="mr-3">Rumus Newton-Raphson:</p>
-            <NRFunction></NRFunction>
-          </div>
-          <div className="flex justify-center items-center">
-            <LoopInput formErr={formErr} validateHandler={validate}></LoopInput>
-            <Tombol clickHandler={handleClick} text="Hitung Sekarang!"></Tombol>
+          <div className="flex justify-center mb-5">
+            <div className="flex flex-col">
+              <span>
+                Rumus Newthon-Raphson: <NRFunction></NRFunction>
+              </span>
+              <div className="my-2">
+                <h3 className="inline mr-3">Tebakan Awal : {guessNumber}</h3>
+                <Tombol
+                  clickHandler={getRandomHandler}
+                  text="Ubah Tebakan Awal"
+                ></Tombol>
+              </div>
+              <div className="flex">
+                <LoopInput
+                  formErr={formErr}
+                  validateHandler={validate}
+                ></LoopInput>
+                <Tombol
+                  clickHandler={handleClick}
+                  text="Hitung Sekarang!"
+                ></Tombol>
+              </div>
+            </div>
           </div>
         </section>
         <section className="px-4 pb-10">

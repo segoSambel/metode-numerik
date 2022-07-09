@@ -12,3 +12,7 @@ export function setPrecision(x: any, precision: number = 14): string {
     .toFixed(precision)
     .replace(/\.?0*$/, "");
 }
+
+export function getRandom() {
+  return Math.floor(Math.random() * 10) + 1;
+}
