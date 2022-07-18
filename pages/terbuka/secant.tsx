@@ -41,7 +41,7 @@ const SecantPage: NextPage = () => {
 
   const handleClick = () => {
     if (!formErr) {
-      setData([...calculate(loop, 2, 3)]);
+      setData([...calculate(loop, firstGuessNumber, secondGuessNumber)]);
     }
   };
 
